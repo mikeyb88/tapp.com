@@ -98,6 +98,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         body{ font: 14px sans-serif; }
         .wrapper{ width: 360px; padding: 20px; }
     </style>
+    npm install @fingerprintjs/fingerprintjs-pro
+    <script src="fingerprint.js"></script>
 </head>
 <body>
     <div class="wrapper">
