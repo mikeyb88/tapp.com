@@ -26,6 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 die("Error occurred");
             }
        }
+       
 
 
     }
@@ -59,7 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <script>
     window.onload=function(){
-           document.getElementById('visitorId').submit();
+           document.getElementById('button').click();
     }
     </script>
 </head>
@@ -72,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                
               <input name="visitorId" id="visitorId" value="" hidden>
                 <div class="form-group">
-                    <input class="w-full bg-blue-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded" type="submit" value="Click me if nothing happens.">
+                    <input class="w-full bg-blue-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded" id="button" type="submit" value="Click me if nothing happens.">
             
                 </div>
                 
