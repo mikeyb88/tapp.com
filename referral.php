@@ -57,34 +57,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     onload="initFingerprintJS()"
     ></script>
 
-    
+    <script>
+    window.onload=function(){
+           document.getElementById('visitorId').submit();
+    }
+    </script>
 </head>
 <body>
     <div class="flex h-screen bg-blue-700">
         <div class="max-w-lg m-auto bg-blue-100 rounded p-5">   
-            <h2 class="text-xl">Sign Up</h2>
-            <p class="text-sm">Please fill this form to create an account.</p>
+            <h2 class="text-xl">Please wait...</h2>
+            <p class="text-sm">Redirecting you automatically to El Toro Ryan</p>
             <form class="p-3" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <div class="form-group">
-                    <label class="block mb-2 text-blue-500">Email</label>
-                    <input 
-                    class="w-full p-2 mb-6 text-blue-700 border-b-2 border-blue-500 outline-none focus:bg-gray-300" 
-                    type="text" name="email">
-
-                </div>    
-                <div class="form-group">
-                    <label class="block mb-2 text-blue-500">Password</label>
-                    <input class="w-full p-2 mb-6 text-blue-700 border-b-2 border-blue-500 outline-none focus:bg-gray-300" type="password" name="password">
-                </div>
+               
               <input name="visitorId" id="visitorId" value="" hidden>
                 <div class="form-group">
-                    <input class="w-full bg-blue-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded" type="submit" value="Submit">
+                    <input class="w-full bg-blue-700 hover:bg-pink-700 text-white font-bold py-2 px-4 mb-6 rounded" type="submit" value="Click me if nothing happens.">
             
                 </div>
                 
             </form>
             <footer>
-                <a class="text-blue-700 hover:text-pink-700 text-sm float-left" href="#">Log In</a>
+                <a class="text-blue-700 hover:text-pink-700 text-sm float-left" href="login.php">Log In</a>
             </footer> 
         </div>
         
