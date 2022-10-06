@@ -5,11 +5,17 @@ require_once "config.php";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     
-    if(!empty($row['visitorId'])){
+  $visitorId = $_POST['visitorId'];
+    
+        $query = $db->querySingle("SELECT COUNT(*) FROM users WHERE visitorId = '$visitorId'");
+        
+        if($query > 0) {
+            
+        
 
-        die("Looks like you've already been referred to this profile!");
-    } else {
-            $visitorId = $_POST['visitorId'];
+          die("Looks like you've already been referred to this profile!");
+        } else {
+            
             $insert_stmt = $db->prepare("INSERT INTO users (visitorId, referralUrl) values ('$visitorId', '$referralUrl')");
             $insert_stmt->bindValue($visitorId, $_POST['visitorId'], SQLITE3_TEXT);
             $res = $insert_stmt->execute();
