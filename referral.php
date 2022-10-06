@@ -59,9 +59,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ></script>
 
     <script>
-    window.onload=function(){
-           document.getElementById('button').click();
+    function greet(){
+    document.getElementById('button').click();
     }
+    setTimeout(greet, 5000);
     </script>
 </head>
 <body>
